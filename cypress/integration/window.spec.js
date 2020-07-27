@@ -12,18 +12,6 @@ context('Window', () => {
   });
 
   it('cy.title() - get the title', () => {
-    cy.title().should('include', 'ref');
-  });
-
-  it('should have a header', () => {
-    cy.get('h1').should('have.text', 'React-Express-Firebase Boilerplate');
-  });
-
-  it('should have a description', () => {
-    cy.get('p').should('have.text', 'Here is a picture of my dog');
-  });
-
-  it('should display a image in element div with class image', () => {
-    cy.get('div[class="content"]').find('img').should('be.visible');
+    cy.title().should('include', 'Redux-Thunk Example');
   });
 });

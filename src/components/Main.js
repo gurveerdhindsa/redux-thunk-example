@@ -1,5 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
+import Posts from './Posts'
 import '../assets/css/main.less';
 
 export default class Main extends Component {
@@ -7,13 +8,8 @@ export default class Main extends Component {
     return (
       <div className="main">
         <div className="content">
-          <h1>React-Express-Firebase Boilerplate</h1>
-          <p>Here is a picture of my dog</p>
-          <img
-            className="content-image--dog"
-            src="images/dog.jpg"
-            alt="happy dog"
-          />
+          <h1>Post Headings</h1>
+          <Posts />
         </div>
       </div>
     );
