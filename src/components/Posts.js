@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../actions';
 
@@ -17,11 +18,7 @@ const Posts = ({ fetchPosts, loading, posts, hasErrors }) => {
     ));
   };
 
-  return (
-    <section>
-      {renderPosts()}
-    </section>
-  );
+  return <section>{renderPosts()}</section>;
 };
 
 const mapStateToProps = (state) => ({
@@ -31,7 +28,19 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  fetchPosts
+  fetchPosts,
+};
+
+Posts.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  posts: PropTypes.array.isRequired,
+  hasErrors: PropTypes.bool.isRequired,
+};
+
+Posts.defaultProps = {
+  loading: true,
+  posts: [],
+  hasErrors: false,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Posts);

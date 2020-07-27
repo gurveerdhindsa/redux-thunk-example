@@ -1,6 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
-import Posts from './Posts'
+import Posts from './Posts';
 import '../assets/css/main.less';
 
 export default class Main extends Component {

@@ -4,7 +4,7 @@ export const initialState = {
   hasErrors: false,
 };
 
-export default function postsReducer(state = initialState, action) {
+const postsReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'GET_POSTS':
       return { ...state, loading: true };
@@ -18,12 +18,14 @@ export default function postsReducer(state = initialState, action) {
       };
 
     case 'GET_POSTS_FAILURE':
-        return {
-            ...state,
-            loading: false,
-            hasErrors: true
-        }
+      return {
+        ...state,
+        loading: false,
+        hasErrors: true,
+      };
     default:
       return state;
   }
-}
+};
+
+export default postsReducer;
